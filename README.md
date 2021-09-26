@@ -1,6 +1,13 @@
 # ✨ Awake SDK ✨
 
-This reporisotry contains main Typescript SDK for accessing Awake subscription protocol on EVM based chains. The SDK methods include support for both parts user and admin
+This reporisotry contains main Typescript SDK for accessing Awake subscription protocol on EVM based chains. 
+
+- **pay with crypto** - safe and anonymous
+- **swap using any tokens** - user pay with any token, you get the token you need
+- **no backend needed** - all data required for subsriptions and ouser managment stored on-chain
+- **no third-party services and complex checkout steps** - keep users on your site, only Metamask login required
+
+The SDK methods include support for both parts user and admin
 
 ### 💻 Admin
 - Create and manage oraganizations
