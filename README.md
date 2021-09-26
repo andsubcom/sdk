@@ -25,44 +25,36 @@ The SDK methods include support for both parts user and admin
 3. Install deps by running `npm install`
  
 ### 🔧 API Overview
--
+- Create organization with the given name
 ```ts
-// Create organization with the given name
 awake.subscriptionHub.createOrganization(orgName: string, txParams?: TxBase)
 ```
--
+- Create subscription for the organization
 ```ts
-// Create subscription for the organization
 awake.subscriptionHub.createSubscription(orgId: BigNumberish, orgName: string, token: string, amount: BigNumberish, period: BigNumberish, txParams?: TxBase)
 ```
--
+- Subscribe user
 ```ts
-// Subscribe user
 awake.subscriptionHub.buySubscription(subscriptionId: BigNumberish, txParams?: TxBase)
 ```
--
+- Extend existing subscription
 ```ts
-// Extend existing subscription
 awake.subscriptionHub.extendSubscription(tokenId: BigNumberish, txParams?: TxBase)
 ```
--
+- Check user ETH address for subscription
 ```ts
-// Check user ETH address for subscription
 awake.subscriptionHub.checkUserHasActiveSubscription(user: string, subscriptionId: BigNumberish)
 ```
--
+- List all available org subscriptions
 ```ts
-// List all available org subscriptions
 awake.subscriptionHub.getAllSubscriptionsForOrganization(orgId: BigNumberish)
 ```
--
+- Get additional organization info 
 ```ts
-// Get additional organization info 
 awake.subscriptionHub.getOrganizationInfo(orgId: BigNumberish)
 ```
--
+- Get subscription details
 ```ts
-// Get subscription details
 awake.subscriptionHub.getSubscriptionInfo(subscriptionId: BigNumberish)
 ```
 
