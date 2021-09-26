@@ -1,13 +1,61 @@
-# Awake SDK
+# ✨ Awake SDK ✨
 
-This reporisotry contains main Typescript SDK for accessing Awake subscription protocol on EVM based chains
+This reporisotry contains main Typescript SDK for accessing Awake subscription protocol on EVM based chains. The SDK methods include support for both parts user and admin
 
-- A user can create and manage organizations.
-- An organization can have multiple subscriptions.
-- A client can view organization subscriptions, get subscription cost, and subscribe to it.
+### 💻 Admin
+- Create and manage oraganizations
+- View and manage user subscriptions
 
+### 🌻 User
+- Check access
+- Create subscription
+- Extend subscription
+- Revoke access
 
-### Set up
+### 🛫 Set up
 
 1. Create `.env` and add Ethereum address private key to PRIVATE_KEY
 3. Install deps by running `npm install`
+ 
+### 🔧 API Overview
+-
+```ts
+// Create organization with the given name
+awake.subscriptionHub.createOrganization(orgName: string, txParams?: TxBase)
+```
+-
+```ts
+// Create subscription for the organization
+awake.subscriptionHub.createSubscription(orgId: BigNumberish, orgName: string, token: string, amount: BigNumberish, period: BigNumberish, txParams?: TxBase)
+```
+-
+```ts
+// Subscribe user
+awake.subscriptionHub.buySubscription(subscriptionId: BigNumberish, txParams?: TxBase)
+```
+-
+```ts
+// Extend existing subscription
+awake.subscriptionHub.extendSubscription(tokenId: BigNumberish, txParams?: TxBase)
+```
+-
+```ts
+// Check user ETH address for subscription
+awake.subscriptionHub.checkUserHasActiveSubscription(user: string, subscriptionId: BigNumberish)
+```
+-
+```ts
+// List all available org subscriptions
+awake.subscriptionHub.getAllSubscriptionsForOrganization(orgId: BigNumberish)
+```
+-
+```ts
+// Get additional organization info 
+awake.subscriptionHub.getOrganizationInfo(orgId: BigNumberish)
+```
+-
+```ts
+// Get subscription details
+awake.subscriptionHub.getSubscriptionInfo(subscriptionId: BigNumberish)
+```
+
